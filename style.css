@@ -1,0 +1,16 @@
+body{
+    margin-left: 30%;
+    margin-right:30%; 
+    
+}
+.hl hr{
+    height: 3px;
+    background: black;
+}
+img{
+    height: 250px;
+    width: 550px;
+}
+h3{
+    font-family: serif, monospace;
+}

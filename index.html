@@ -1,0 +1,209 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <div class="p1">
+    module), as well as additional <em>Action handlers</em>. For example, changes in business processes<br>
+or operational workflows result in the need for exchanging new messages. New <em>Action<br>
+handlers</em> can be implemented for processing these messages and the <em>Controller</em> can be<br>
+easily configured to dispatch the appropriate message to the dedicated <em>Action handler</em>.<br><br>
+<em>Presentation Layer services</em>. The <em>Presentation layer services</em> of the framework contain<br>
+a set of tools and methods targeting the development of adaptive XML-based user<br>
+interface modules. Using these tools and methods one can assemble user interface<br>
+modules from XML documents. We call these documents user interface documents. An<br>
+example of such a document is shown on Figure 7.<br>
+    
+    </div>
+    <br>
+    <div class="p2">The key elements of the user interface document are:</div><br>
+    
+    <ol type="1">
+        
+        <li><em>Serializable User Interface Components:</em> The framework provides a set of common<br>
+visual controls like menus, text boxes, buttons, list boxes, and so on that support<br>
+XML serialization and a set of specialized user interface controls for handling the<br>
+framework’s data model that also support XML serialization. These controls<br>
+support direct binding to framework’s message structures. Serializable forms and<br>
+dialogs are also available as part of the framework. An example definition of such<br>
+components is shown on part A of Figure 7.</li><br>
+        <li><em>Serializable non-visual Components:</em> A <em>user interface document</em> contains also<br>
+XML descriptions targeting non-visual components of the framework that also<br>
+support XML serialization. These components undertake a set of operations such<br>
+as sending and receiving documents to/from the <em>Controller</em>, sending and receiving<br>
+documents to/from different devices, such as printers or file systems and trans-<br>forming documents. An example definition of such components is shown on part<br>
+B of Figure 7. A complete user interface module is a collection of objects capable<br>
+of accepting and producing XML descriptions. We call these objects <em>Xml objects</em>.<br>
+New <em>Xml objects</em> can be created by anyone planning to extend the user interface<br>
+infrastructure of the framework. The basic interface of an <em>Xml objects</em> contains only<br>
+three operations: the <em>Describe</em> operation supporting the initial definition and<br>
+construction of the object based on an XML description, the <em>LoadXml</em> operation<br>
+supporting the loading of an XML description from the object, and the <em>Xml</em><br>
+operation supporting the generation of an XML description by the object.</li><br>
+        
+        <li>
+        <em>Data Exchange between Xml Objects:</em> The exchange of data between different <em>Xml<br>
+Objects</em> makes use of XSLT transformations to restructure XML descriptions<br>
+generated from one type of object to descriptions suitable for loading from another<br>
+            type of object. An example of a transformation is shown on part C of Figure 7.<br></li><br>
+        <li>
+        <em>XML Description of Data Flow:</em> An XML vocabulary has been defined in order to<br>
+describe the data flow among <em>Xml Jobs</em>. We call these descriptions <em>Xml Jobs</em>.<br>
+The <em>Xml Jobs</em> behave as event handlers for the <em>Xml Jobs</em>. An example of an <em>Xml<br>
+Job</em> is shown on part D of Figure 7.
+        
+        </li><br>
+       
+        </ol>
+    This approach results in an open and extensible set of tools capable of describing and<br>
+implementing client side business logic modules portable to different platforms and<br>
+environments.<br><br><br><br><br>
+       
+    
+    
+    <br><br><br><br>
+    
+    <em>Figure 7. A user interface document</em>    
+    <img src="img.jpg"> 
+    <img src="WhatsApp%20Image%202024-01-17%20at%2014.20.56_d7892778.jpg">
+    
+    
+    <p>From our experience in developing and using our framework, we would like to emphasize<br>
+the following:</p>
+    <ol type="1">
+    <li> Using XML not only as the format for exchanged data but also for the native<br>
+environment for business logic description, UI description, and business objects<br>
+definition results in a rich metadata repository, providing true customization<br>
+capabilities, enabling independent UI development and allowing the transition to<br>
+future technologies.</li><br><br><br><br><br>
+        
+       
+    <li> Inherent support of messaging standards assists in achieving the interoperability<br>
+requirement.</li>
+        <li> The adoption of messaging communication protocol (realized through the adop-<br>tion of Web Services) leads to a loosely-coupled architecture that also contributes<br>
+to the extensibility and better maintenance of the delivered software.<br></li>
+    </ol><br><br><br>
+    <div class="p2">
+    Our approach in the application framework development up to now concentrates more<br>
+on providing basic functionality to the developer in order to deliver quickly robust<br>
+applications. As a result, our framework lacks the wide support to other standards like<br>
+DICOM. However, now we have acknowledged the value of such support in order to<br>
+cover the entire HC domain.<br>
+    
+    </div>
+    <center>
+    <h3>What the Future Holds</h3>
+    </center>
+    <div class="hl"><hr></div>
+    <div>
+    Nowadays it is commonly accepted that standardization at all levels is more than critical.<br>
+Efforts for harmonization among several standardization bodies in the area of HC, give<br>
+hope for achieving one global set of standards in the future.<br><br>
+Rouggery (2003) at the purpose section of <em>Web Services Profile</em> presenting its scope,<br>
+more or less describes the future as follows: “The ideal situation that we will be looking<br>
+at is a HC environment where “plug-n-play” interoperability via Web Services is a reality.<br>
+In this environment Independent Software Vendors (ISV) and corporate developers<br>
+implementing HL7 interfaces can write generic and reusable classes, subroutines, and<br>
+modules consistent with the guidelines set forth by the HL7 standard for Web Services<br>
+standards in order to handle HL7 message traffic from a potentially unlimited number of<br>
+connecting applications and services. Applications that “expose” HL7 messages (e.g.,<br>
+Web Services servers) will do so according to the HL7 Web Services Profile (WSP)<br>
+guidelines; “consumers” of HL7 messages (e.g., Web Services clients) can be written<br>
+without prior knowledge of the application that they will ultimately end up talking to. In<br>
+addition, this “plug-n-play” environment will take advantage of supporting discovery<br>
+protocols such as UDDI to break the rigidity of the current hard-coded message routing<br>
+infrastructures of most Healthcare enterprises”. We can not be certain, that the widely<br>
+adopted standard for HC messaging in the future will be the HL7; but it’s very likely to<br>
+witness such a scenario. Web Services for sure will play a very important role in the future<br>
+of HC informatics.</div>
+    <center><h3>Conclusion</h3></center>
+    <div class="hl"><hr></div>
+    <div>The healthcare sector is characterized by a continuously growing competition for<br>
+survival under difficult economic conditions of scarce resources and limited growth with<br>
+the constant threat of tightened regulations, public scrutiny, and negative media</div><br><br><br>
+    <br><br><br>
+    <div>
+    exposure. Consequently, HC providers are increasingly seeking opportunities in the<br>
+information technology (IT) field to operate more effectively and efficiently, and to<br>
+reduce the overall costs of healthcare delivery while improving the quality (Ashry &<br>
+Taylor, 2000).</div><br>
+    <div>The HC software community is moving towards the notions of openness (based on<br>
+officially approved and globally acceptable standards) and modularity to tackle the<br>
+integration challenge (Blobel & Holena, 1997, p. 24). Open architectures based on<br>
+officially approved and globally acceptable standards can contribute to interoperability.<br>
+The high rate of change creates the need for systems that have the ability to evolve and<br>
+adapt to the new conditions without excessive cost. Modular software design enables<br>
+best of breed modules—handling emerging and even unpredictable user or unit require-<br>ment—sto be gradually added into the systems and successfully glued within the overall,<br>
+distributed architecture.<br></div><br>
+    <div>In order to achieve the above goal, there is a need for a systematic way of developing<br>
+applications targeting the <em>Applications layer</em>. An effective means to realize it is the use<br>
+of Application Frameworks. Such Application Frameworks should make use of the<br>
+existing standards in order to reap the benefits of the significant work done in the domain,<br>
+presenting the knowledge that lies within the standards and thus introducing them in<br>
+daily use.<br></div><br>
+    <div>The use of Application Frameworks will result in achieving interoperability within HIS<br>
+both on a functional and on conceptual level, reinforcing the role Hospital Information<br>
+Systems play in healthcare.</div><br><br><br>
+    <center><h3>Acknowledgments</h3></center>
+    <div class="hl"><hr></div><br><br>
+    <div>The authors would like to thank Aggelos Androulidakis and George Karkalis for their<br>
+contribution to the framework development, as part of the software development and<br>
+system design team, as well as Miss Chryssa Marinou for her valuable help with English<br>
+language issues.</div><br><br><br>
+    <center><h3>References</h3></center>
+    <div class="hl"><hr></div><br><br>
+    <div>Ashry, N. & Taylor, W. (2000). Requirements analysis as innovation diffusion: A<br>
+    proposed requirements analysis strategy for the development of an integrated<br>
+hospital information support system [Electronic version]. <em>Proceedings of the 33rd<br>
+Hawaii International Conference on System Science, Hawaii</em>. Retrieved April 14,<br>
+2003, from IEEE Computer Society Digital Library.<br>
+    </div>
+    <div>Beale, T. (2002) Archetypes: Constraint-based domain models for future-proof informa-<br>tion systems. Retrieved March 10, 2004, from the openEHR Web site <em>http://
+www.openehr.org/downloads/archetypes/archetypes_new.pdf</em></div><br><br><br>
+    <br><br><br>
+    <div>Beale, T., Goodchild, A. & Heard, S. (2002). Design principles for the EHR (version 2.4)<br>
+April 1, 2002. Retrieved January 13, 2004, from the openEHR Web site <em>http://<br>
+www.openehr.org/downloads/design_principles_2_4.pdf</em><br>
+Beeler, G., et al. (1999). Message development framework (version 3.3). Retrieved March<br>
+15, 2004, from the HL7 Web site <em>http://www.hl7.org/Library/mdf99/mdf99.pdf</em><br>
+Blobel, B. & Holena, M. (1997). Comparing middleware concepts for advanced healthcare<br>
+system architectures. International Journal of Medical Informatics, 46, 69-85<br>
+Case, J., Mckenzie, L., Wellnet, A. & Schadow, G. (2003). HL7 Reference Information<br>
+Model (version 02-02). Retrieved March 15, 2004, from the HL7 Web site <em>http://<br>
+www.hl7.org/Library/data-model/RIM/C30202/rim.htm</em><br>
+CEN TC 251 (1998). <em>prENV 12967-1 - HISA Part 1: Healthcare Middleware Layer</em>.<br>
+[Standard]<br>
+CEN TC-251, (n.d.). <em>About TC-251. Retrieved March 15, 2004, from the CEN TC-251 Web<br>
+site http://www.CEN/TC251.org</em><br>
+Codenie, W., De Hondt, K., Steyaert, P. & Vercammen, A. (1997). From custom applica-<br>tions to domain-specific frameworks [Electronic Version]. <em>Communications of the<br>
+ACM, 40(10)</em>, 71-77.<br>
+De Velde, V. (2000). Framework for a clinical information system. <em>International Journal<br>
+of Medical Informatics</em>, 57, 57-72.<br>
+Digital <em>Imaging and Communication in Medicine (DICOM), PS 3.1</em>, (2003). National<br>
+Electrical Manufacturers Association. Retrieved February 20, 2004, from NEMA<br>
+Web site <em>http://medical.nema.org/dicom/2003.html</em><br>
+Fayad, M. & Hamu, L. (2000). Enterprise frameworks: Guidelines for selection [Electronic<br>
+Version]. <em>ACM Computing Surveys</em>, 32(1). Retrieved September 15, 2003, from the<br>
+ACM portal Web site <em>http://portal.acm.org/citation.cfm?doid=351936.351940</em><br>
+Fayad, M. & Schmidt, D. (1997). Object-oriented application frameworks [Electronic<br>
+Version]. <em>Communications of the ACM, 40</em>(10), 32-38.<br>
+Fayad, M., Schmidt, D. & Johnson, R. (1999). <em>Object-oriented frameworks: Problems &<br>
+experiences in building application frameworks</em>. John Wiley.<br>
+Gorissen, B. (1997). <em>DICOM in a Nutshell</em>, Retrieved February 1, 2004, from the Philips<br>
+Medical Systems Web site <em>ftp://ftp-wjq.philips.com/medical/interoperability/<br>
+out/DICOM_Information/d2course.pdf</em><br>
+HANSA. (n.d.). Home page. Available at <em>http://www.sintec.ro/hansa/index.html</em><br>
+HL7 (n.d.). <em>What is HL7?</em> Retrieved March 15, 2004, from the HL7 Web site <em>http://<br>
+www.hl7.org/about</em><br>
+HL7 (2003). <em>HL7 messaging standard version 2.5</em> [ANSI Standard].<br>
+HL7 (2004). <em>HL7 V3 Guide</em>, version 3 ballot 6 foundation documents. Retrieved March<br>
+1, 2004, from HL7 Web site members’ area <em>http://www.hl7.org/v3ballot6/html/<br>
+foundationdocuments/welcome/index.htm</em><br>
+IBM Corporation, Microsoft Corporation (April 7, 2002).<em> Security in a Web Services<br>
+world: A proposed architecture and roadmap</em>. Whitepaper Version 1.0. Retrieved</div>
+    <br><br><br>
+    
+
+    </body>
+
+</html>
